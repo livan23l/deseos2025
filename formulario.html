@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- Formulario para generar cartas -->
+    <section class="formulario">
+        <!-- Remitente  -->
+        <div class="formulario__seccion formulario__seccion--remitente">
+            <label for="remitente" class="formulario__titulo">Remitente</label>
+            <div class="seccion__remitente">
+                <input type="text" name="remitente" id="remitente" placeholder="Tu nombre" class="input">
+                <div class="remitente__anonimo">
+                    <input type="checkbox" name="anonimo" id="anonimo" class="input">
+                    <label for="anonimo" class="anonimo__label">Anónimo</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Destinatario -->
+        <div class="formulario__seccion formulario__seccion--destinatario">
+            <label for="destinatario" class="formulario__titulo">Destinatario</label>
+            <input type="text" name="destinatario" id="destinatario" placeholder="La persona que la recibirá" class="input">
+        </div>
+
+        <!-- Estilo -->
+        <div class="formulario__seccion formulario__seccion--estilo">
+            <span class="formulario__titulo">Selecciona un estilo</span>
+
+            <div class="seccion__estilos">
+                <div class="estilos__opcion">
+                    <input type="radio" name="estilo" id="estilo_1" value="1" class="input" checked>
+                    <label for="estilo_1" class="opcion__label opcion__label--1">Estilo 1</label>
+                </div>
+
+                <div class="estilos__opcion">
+                    <input type="radio" name="estilo" id="estilo_2" value="2" class="input">
+                    <label for="estilo_2" class="opcion__label opcion__label--2">Estilo 2</label>
+                </div>
+
+                <div class="estilos__opcion">
+                    <input type="radio" name="estilo" id="estilo_3" value="3" class="input">
+                    <label for="estilo_3" class="opcion__label opcion__label--3">Estilo 3</label>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mensaje -->
+        <div class="formulario__seccion formulario__seccion--mensaje">
+            <label for="mensaje" class="formulario__titulo">Mensaje</label>
+            <textarea name="mensaje" id="mensaje" placeholder="El mensaje de la carta" class="textarea"></textarea>
+        </div>
+    </section>
+
+    <button type="button" id="generar" class="boton">Generar carta</button>
+</body>
+
+</html>

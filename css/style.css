@@ -1,0 +1,130 @@
+/* **Estilos para el formulario** */
+.formulario {
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #E84;
+    padding: 0.6rem 0;
+    display: grid;
+    grid-template-rows: repeat(4, auto);
+    gap: 1rem;
+}
+
+.formulario__seccion {
+    width: 80%;
+    margin: 0 auto;
+    padding: 0.5rem 0 2rem;
+    border-bottom: 1px solid black;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.formulario__seccion:last-child {
+    border-bottom: none;
+    padding-bottom: 0.5rem;
+}
+
+.formulario__titulo {
+    font-size: 1.65rem;
+    font-weight: bold;
+    margin-bottom: 0.8rem;
+    color: #EEE;
+}
+
+.seccion__remitente {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.remitente__anonimo {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 0.2rem;
+    position: relative;
+}
+
+.anonimo__label {
+    width: 7rem;
+    height: 2rem;
+    padding-right: 0.5rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: rgb(158, 87, 0);
+    text-align: end;
+    line-height: 2rem;
+    cursor: pointer;
+}
+
+.seccion__estilos {
+    width: 80%;
+    margin-top: 0.4rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 0.7rem 1rem;
+}
+
+.estilos__opcion {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.opcion__label {
+    cursor: pointer;
+    font-size: 1.25rem;
+    color: #EEE;
+}
+
+
+/* **Inputs** */
+
+/* Text */
+.input[type="text"] {
+    width: 11rem;
+    height: 2rem;
+    padding-left: 0.4rem;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+/* Radio */
+
+.input[type="radio"] {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 0;
+    appearance: none;
+    cursor: pointer;
+    mask: url("../img/radio-1.svg") no-repeat center;
+}
+
+.input[type="radio"]:hover {
+    mask: url("../img/radio-2.svg") no-repeat center;
+}
+
+.input[type="radio"]:checked {
+    mask: url("../img/radio-3.svg") no-repeat center;
+}
+
+/* Checkbox */
+
+.input[type="checkbox"] {
+    width: 1.5rem;
+    height: 1.5rem;
+    appearance: none;
+    position: absolute;
+    left: 0.5rem;
+    cursor: pointer;
+    mask: url("../img/incognito-1.svg") no-repeat center;
+}
+
+.input[type="checkbox"]:checked {
+    mask: url("../img/incognito-2.svg") no-repeat center;
+}

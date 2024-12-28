@@ -1,0 +1,94 @@
+:root{
+    /*Colores temporales*/
+    --primario: #1A2A5A;
+    --secundario: #2445B0;
+    --terciario: #06066F;
+    --cuaternario: #FFA500;
+
+    --texto-primario: #FFFFFF;
+    --texto-secundario: #8CDCFF;
+
+    /*Fuentes temporales*/
+    --fuente-primaria: 'Trebuchet MS';
+    --fuente-secundaria: 'Lucida Sans Unicode';
+    --fuente-tercearia: 'Lucida Grande';
+}
+
+/* ***Estilos Generales*** */
+
+body{
+    font-family: var(--fuente-primaria);
+    margin: 0;
+    padding: 0;
+}
+
+/* ***Estilos para el Header*** */
+
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--primario);
+}
+
+.header__titulo{
+    color: var(--texto-primario);
+    margin: 0;
+    margin-top: 1rem;
+}
+
+.header__navegacion{
+    width: 100%;
+    max-width: 80rem;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.navegacion__elemento{
+    width: 10rem;
+    max-width: 15rem;
+    padding: 0.8rem 1rem;
+    border-radius: 5px;
+    background-color: var(--secundario);
+    color: var(--texto-secundario);
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navegacion__elemento:hover{
+    color: var(--texto-primario);
+    background-color: var(--terciario);
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+/* **Media Quey*** */
+
+@media (min-width: 36rem){
+    .header{
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0.5rem 0 0.8rem 0.8rem;
+    }
+
+    .header__titulo{
+        margin: 0;
+        min-width: fit-content;
+        text-align: center;
+    }
+    
+    .header__navegacion{
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    .navegacion__elemento{
+        padding: 1rem 0.5rem;
+    }
+}

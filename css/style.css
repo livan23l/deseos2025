@@ -1,6 +1,9 @@
-/* **Estilos para el formulario** */
+/* ***Estilos para el formulario*** */
 .formulario {
-    width: 100%;
+    box-sizing: border-box;
+    margin: 1rem auto 0;
+    min-width: 25rem;
+    max-width: 50rem;
     border: 1px solid black;
     border-radius: 10px;
     background-color: #E84;
@@ -25,11 +28,43 @@
     padding-bottom: 0.5rem;
 }
 
-.formulario__titulo {
+.formulario__seccion--remitente {
+    grid-row: 1/2;
+}
+
+.formulario__seccion--destinatario {
+    grid-row: 2/3;
+}
+
+.formulario__seccion--estilos {
+    grid-row: 3/4;
+}
+
+.formulario__seccion--mensaje {
+    grid-row: 4/5;
+}
+
+.formulario__label {
     font-size: 1.65rem;
     font-weight: bold;
     margin-bottom: 0.8rem;
     color: #EEE;
+}
+
+.formulario__boton {
+    display: block;
+    margin: 0.5rem auto;
+    padding: 0.5rem 0.8rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: #09F;
+    color: #EEE;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.seccion__input {
+    position: relative;
 }
 
 .seccion__remitente {
@@ -38,6 +73,15 @@
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
+}
+
+.seccion__estilos {
+    width: 80%;
+    margin-top: 0.4rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    gap: 0.7rem 1rem;
 }
 
 .remitente__anonimo {
@@ -50,23 +94,19 @@
 
 .anonimo__label {
     width: 7rem;
-    height: 2rem;
+    height: 2.5rem;
     padding-right: 0.5rem;
     border: 1px solid black;
     border-radius: 5px;
     background-color: rgb(158, 87, 0);
     text-align: end;
-    line-height: 2rem;
+    line-height: 2.5rem;
     cursor: pointer;
 }
 
-.seccion__estilos {
-    width: 80%;
-    margin-top: 0.4rem;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    gap: 0.7rem 1rem;
+.anonimo__label:hover {
+    background-color: #D73;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
 .estilos__opcion {
@@ -76,55 +116,145 @@
     gap: 0.3rem;
 }
 
-.opcion__label {
+.estilos__label {
     cursor: pointer;
     font-size: 1.25rem;
     color: #EEE;
 }
 
+/* **Íconos** */
+.icono {
+    position: absolute;
+    top: 50%;
+    left: 0.3rem;
+    translate: 0 -50%
+}
+
+.icono--mensaje {
+    position: relative;
+    translate: 0 -60%;
+}
 
 /* **Inputs** */
 
 /* Text */
-.input[type="text"] {
-    width: 11rem;
-    height: 2rem;
-    padding-left: 0.4rem;
+.formulario__input--text {
+    box-sizing: border-box;
+    width: 13rem;
+    height: 2.5rem;
+    padding-left: 1.8rem;
     border: 1px solid black;
     border-radius: 5px;
 }
 
+.formulario__input--text:focus {
+    outline: none;
+    border: 2px solid #09F;
+}
+
 /* Radio */
 
-.input[type="radio"] {
+.formulario__input--radio {
     width: 1.5rem;
     height: 1.5rem;
     margin: 0;
     appearance: none;
     cursor: pointer;
-    mask: url("../img/radio-1.svg") no-repeat center;
+    background-color: black;
+    mask: url("../img/icons/radio-1.svg") no-repeat center;
 }
 
-.input[type="radio"]:hover {
-    mask: url("../img/radio-2.svg") no-repeat center;
+.formulario__input--radio:hover {
+    mask: url("../img/icons/radio-2.svg") no-repeat center;
 }
 
-.input[type="radio"]:checked {
-    mask: url("../img/radio-3.svg") no-repeat center;
+.formulario__input--radio:checked {
+    mask: url("../img/icons/radio-3.svg") no-repeat center;
 }
 
 /* Checkbox */
 
-.input[type="checkbox"] {
+.formulario__input--checkbox {
     width: 1.5rem;
     height: 1.5rem;
     appearance: none;
     position: absolute;
     left: 0.5rem;
     cursor: pointer;
-    mask: url("../img/incognito-1.svg") no-repeat center;
+    background-color: black;
+    mask: url("../img/icons/incognito-1.svg") no-repeat center;
 }
 
-.input[type="checkbox"]:checked {
-    mask: url("../img/incognito-2.svg") no-repeat center;
+.formulario__input--checkbox:checked {
+    mask: url("../img/icons/incognito-2.svg") no-repeat center;
+}
+
+/* Textarea */
+
+.formulario__textarea {
+    padding: 0.5rem;
+    width: 18rem;
+    height: 10rem;
+    border: 1px solid black;
+    border-radius: 4px;
+    resize: none;
+}
+
+.formulario__textarea:focus {
+    outline: none;
+    border: 2px solid #09F;
+}
+
+/* ***Media Query*** */
+@media(width > 36rem) {
+    /* ***Estilos para el formulario*** */
+    .formulario {
+        display: grid;
+        grid-template-rows: repeat(3, auto);
+        grid-template-columns: 2fr 3fr;
+        gap: 1rem 0;
+    }
+
+    .formulario__seccion {
+        width: 90%;
+        margin: 0 auto;
+        padding: 0.5rem 0 2rem;
+        border-bottom: 1px solid black;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+
+    .formulario__seccion:last-child {
+        border-bottom: none;
+        padding-bottom: 0.5rem;
+    }
+
+    .formulario__seccion--remitente {
+        grid-row: 1/2;
+        grid-column: 1/3;
+    }
+
+    .formulario__seccion--destinatario {
+        grid-row: 2/3;
+        grid-column: 1/3;
+    }
+    
+    .formulario__seccion--estilos {
+        width: 80%;
+        border-bottom: none;
+        text-align: center;
+        grid-row: 3/4;
+        grid-column: 1/2;
+    }
+    
+    .formulario__seccion--mensaje {
+        width: 80%;
+        grid-row: 3/4;
+        grid-column: 2/3;
+    }
+
+    .seccion__estilos {
+        gap: 1.5rem;
+    }
 }

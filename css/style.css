@@ -1,23 +1,58 @@
+/* ***Carga de las fuentes*** */
+/* Principal */
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url('../fonts/Principal/BebasNeue.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+/* Fuentes para las cartas */
+@font-face {
+    font-family: 'Libre Baskerville';
+    src: url('../fonts/Estilo-1/LibreBaskerville.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'Playwrite AU QLD Guides';
+    src: url('../fonts/Estilo-2/PlaywriteAUQLDGuides.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'Rubik Vinyl';
+    src: url('../fonts/Estilo-3/RubikVinyl.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+/* ***Variables de la página*** */
+
 :root{
-    /*Colores temporales*/
+    /* Colores */
     --primario: #1A2A5A;
     --secundario: #2445B0;
     --terciario: #06066F;
     --cuaternario: #FFA500;
 
     --texto-primario: #FFFFFF;
-    --texto-secundario: #8CDCFF;
+    --texto-secundario: #ADE6FF;
 
-    /*Fuentes temporales*/
-    --fuente-primaria: 'Trebuchet MS';
-    --fuente-secundaria: 'Lucida Sans Unicode';
-    --fuente-tercearia: 'Lucida Grande';
+    /* Fuentes */
+    --fuente-principal: 'Bebas Neue';
+    --fuente-estilo-1: 'Libre Baskerville';
+    --fuente-estilo-2: 'Playwrite AU QLD Guides';
+    --fuente-estilo-3: 'Rubik Vinyl';
 }
 
 /* ***Estilos Generales*** */
 
 body{
-    font-family: var(--fuente-primaria);
+    font-family: var(--fuente-principal);
+    letter-spacing: 0.1rem;
+    word-spacing: 0.4rem;
+    text-transform: capitalize;
     margin: 0;
     padding: 0;
 }

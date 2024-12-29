@@ -95,6 +95,63 @@ body{
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
+/* ***Estilos para el carrusel*** */
+.carrusel {
+    margin: 1rem auto;
+    padding: 1rem 0;
+    width: 100%;
+    max-width: 50rem;
+    border-radius: 6px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.carrusel__boton {
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: var(--secundario);
+    border-radius: 15px;
+    opacity: 0.4;
+}
+
+
+.boton__anterior, .boton__siguiente {
+    appearance: none;
+    min-width: 100%;
+    min-height: 100%;
+    background-color: var(--texto-secundario);
+    cursor: pointer;
+}
+
+.carrusel__boton:hover {
+    background-color: var(--terciario);
+    opacity: 0.7;
+    scale: 1.1;
+}
+
+.carrusel__boton:hover > .boton__anterior, 
+.carrusel__boton:hover > .boton__siguiente {
+    background-color: var(--texto-primario);
+}
+
+.boton__anterior {
+    mask: url("../img/icons/anterior.svg") no-repeat center;
+}
+
+.boton__siguiente {
+    mask: url("../img/icons/siguiente.svg") no-repeat center;
+}
+
+.carrusel__imagen {
+    min-width: 0;
+    width: 70%;
+    max-width: 25rem;
+    border-radius: 15px;
+}
+
 /* ***Estilos para el formulario*** */
 .formulario {
     box-sizing: border-box;

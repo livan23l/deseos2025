@@ -309,8 +309,79 @@ body{
     border: 2px solid #09F;
 }
 
+/*Estilos para el contador*/
+.contendor__contador{
+    background-color: var(--secundario);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    min-height: 100vh;    
+    min-width: 20rem;
+    max-width: 80rem;
+    padding: 2rem;
+    gap: 1rem;
+}
+
+.contador__titulo, .contador{
+    width: 100%;
+    padding: 1rem;
+}
+
+.contador__titulo{
+    font-size: 2rem;
+    color: var(--texto-secundario);
+    border-bottom: 1px solid var(--terciario);
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+    letter-spacing: 5px;
+}
+
+p{
+    color: var(--texto-secundario);
+    font-size: 1.5rem;
+    letter-spacing: 5px;
+}
+
+.contador{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 1.3rem;
+    background-color: var(--cuaternario);
+    font-weight: bold;
+    border-radius: 7px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+.contador__dias::after, .contador__horas::after, .contador__minutos::after {
+    content: "  :";
+    margin-left: 1.5rem;
+}
+
+.contador__dias, .contador__horas, .contador__minutos, .contador__segundos{
+    color: var(--texto-secundario);
+    border-radius: 5px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+.gif__esperando{
+    margin-top: 1rem;
+    padding: 1rem;
+    border-top: 2px solid var(--secundario);
+    border-bottom: 1px solid var(--secundario);
+}
+
+.gif{
+    max-width: 15rem;
+    height: auto;
+    border-radius: 7px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+}
+
 /* ***Media Query*** */
 @media(width > 36rem) {
+    /* ***Estilos para el header*** */
     .header{
         flex-direction: row;
         justify-content: space-around;
@@ -382,5 +453,30 @@ body{
 
     .seccion__estilos {
         gap: 1.5rem;
+    }
+
+    /* ***Estilos para el contador*** */
+    .contendor__contador {
+        max-width: 80rem;
+        padding: 20px;
+    }
+
+    .contador__dias::after, .contador__horas::after, .contador__minutos::after {
+        margin-left: 2.3rem;
+    }
+
+    .contador {
+        flex-direction: row;
+        max-width: 50rem;
+        justify-content: center;
+    }
+
+    .contador > div {
+        font-size: 1.5rem;
+        padding: 1.5rem;
+    }
+
+    .gif {
+        max-width: 100%;
     }
 }

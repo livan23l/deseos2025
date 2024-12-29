@@ -99,7 +99,7 @@ body{
 .nosotros {
     margin: 1rem auto;
     width: 100%;
-    max-width: 50rem;
+    max-width: 60rem;
     padding: 1.5rem 0 3rem;
     border-radius: 10px;
     background-color: var(--primario);
@@ -113,9 +113,9 @@ body{
     margin: 0;
     padding: 0.8rem;
     width: 80%;
-    max-width: 30rem;
+    max-width: 23rem;
     border-radius: 6px;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     text-align: center;
     color: var(--texto-primario);
     box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.6);
@@ -133,7 +133,7 @@ body{
     box-sizing: border-box;
     padding: 2rem 1.5rem;
     width: 90%;
-    max-width: 35rem;
+    max-width: 25rem;
     background-color: var(--secundario);
     color: var(--texto-primario);
     border-radius: 10px;
@@ -144,7 +144,7 @@ body{
     margin-bottom: 2rem;
     padding-bottom: 1rem;
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.8rem;
     border-bottom: 3px solid var(--texto-secundario);
     font-family: var(--fuente-principal);
     text-shadow: 10px 5px 10px rgba(0, 0, 0, 1);
@@ -152,7 +152,7 @@ body{
 
 .articulo__parrafo{
     margin: 0;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     letter-spacing: 0.15rem;
     line-height: 2.3rem;
     text-align: justify;

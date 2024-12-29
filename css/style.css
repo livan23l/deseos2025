@@ -46,7 +46,6 @@ body{
     letter-spacing: 0.1rem;
     word-spacing: 0.4rem;
     text-transform: capitalize;
-    margin: 0;
 }
 
 /* ***Estilos para el Header*** */
@@ -394,8 +393,82 @@ body{
     border: 2px solid var(--texto-secundario);
 }
 
+/* ***Estilos para el contador*** */
+.contenedor{
+    margin: 1rem auto;
+    padding: 2rem;
+    min-width: 20rem;
+    max-width: 40rem;
+    background-color: var(--primario);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 5rem;
+    color: var(--texto-secundario);
+}
+
+.contenedor__titulo {
+    margin: 0;
+    width: 100%;
+    padding: 1rem;
+    font-size: 2.5rem;
+    border-bottom: 2px solid var(--secundario);
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+    letter-spacing: 5px;
+}
+
+.contenedor__principal {
+    width: 100%;
+    max-width: 30rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.contenedor__footer {
+    width: 100%;
+    transform: scaleX(-1) rotate(5deg);
+}
+
+.principal__titulo, .principal__footer {
+    margin: 0;
+    font-size: 1.5rem;
+    letter-spacing: 5px;
+}
+
+.principal__contador{
+    width: 100%;
+    height: 6rem;
+    border-radius: 7px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 1.8rem;
+    background-color: var(--cuaternario);
+    font-weight: bold;
+    color: var(--texto-primario);
+}
+
+.contador__dias::after, .contador__horas::after, .contador__minutos::after {
+    content: ":";
+    margin-left: 1.5rem;
+}
+
+.contador__dias, .contador__horas, .contador__minutos, .contador__segundos{
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.8);
+}
+
+.gif{
+    width: 15rem;
+}
+
 /* ***Media Query*** */
 @media(width > 36rem) {
+    /* ***Estilos para el header*** */
     .header{
         flex-direction: row;
         justify-content: space-around;

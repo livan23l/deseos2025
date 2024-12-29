@@ -43,7 +43,7 @@
 
 body{
     font-family: var(--fuente-principal);
-    letter-spacing: 0.15rem;
+    letter-spacing: 0.1rem;
     word-spacing: 0.4rem;
     text-transform: capitalize;
 }
@@ -153,6 +153,7 @@ body{
 .articulo__parrafo{
     margin: 0;
     font-size: 1.3rem;
+    letter-spacing: 0.15rem;
     line-height: 2.3rem;
     text-align: justify;
     font-family: var(--fuente-principal);
@@ -161,6 +162,7 @@ body{
 
 .parrafo__enlace {
     color: var(--texto-secundario);
+}
 
 /* ***Estilos para el carrusel*** */
 .carrusel {

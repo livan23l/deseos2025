@@ -96,7 +96,7 @@ body{
 
 
 /* ***Estilos para la parte principal*** */
-.principal {
+.nosotros {
     margin: 1rem auto;
     width: 100%;
     max-width: 50rem;
@@ -109,7 +109,7 @@ body{
     gap: 4rem;
 }
 
-.principal__titulo {
+.nosotros__titulo {
     margin: 0;
     padding: 0.8rem;
     width: 80%;
@@ -122,7 +122,7 @@ body{
     text-shadow: 10px 5px 8px rgba(0, 0, 0, 1);
 }
 
-.principal__articulos {
+.nosotros__articulos {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;

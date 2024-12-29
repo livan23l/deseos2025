@@ -3,28 +3,20 @@
 @font-face {
     font-family: 'Bebas Neue';
     src: url('../fonts/Principal/BebasNeue.ttf') format('truetype');
-    font-style: normal;
-    font-weight: normal;
 }
 
 /* Fuentes para las cartas */
 @font-face {
-    font-family: 'Libre Baskerville';
-    src: url('../fonts/Estilo-1/LibreBaskerville.ttf') format('truetype');
-    font-style: normal;
-    font-weight: normal;
+    font-family: 'Playwrite AU QLD Guides';
+    src: url('../fonts/Estilo-1/PlaywriteAUQLDGuides.ttf') format('truetype');
 }
 @font-face {
-    font-family: 'Playwrite AU QLD Guides';
-    src: url('../fonts/Estilo-2/PlaywriteAUQLDGuides.ttf') format('truetype');
-    font-style: normal;
-    font-weight: normal;
+    font-family: 'Libre Baskerville';
+    src: url('../fonts/Estilo-2/LibreBaskerville.ttf') format('truetype');
 }
 @font-face {
     font-family: 'Rubik Vinyl';
     src: url('../fonts/Estilo-3/RubikVinyl.ttf') format('truetype');
-    font-style: normal;
-    font-weight: normal;
 }
 
 /* ***Variables de la página*** */
@@ -38,11 +30,12 @@
 
     --texto-primario: #FFFFFF;
     --texto-secundario: #ADE6FF;
+    --texto-terciario: #133FC4;
 
     /* Fuentes */
     --fuente-principal: 'Bebas Neue';
-    --fuente-estilo-1: 'Libre Baskerville';
-    --fuente-estilo-2: 'Playwrite AU QLD Guides';
+    --fuente-estilo-1: 'Playwrite AU QLD Guides';
+    --fuente-estilo-2: 'Libre Baskerville';
     --fuente-estilo-3: 'Rubik Vinyl';
 }
 
@@ -66,6 +59,7 @@ body{
 
 .header__titulo{
     color: var(--texto-primario);
+    font-size: 2.5rem;
     margin: 0;
     margin-top: 1rem;
 }
@@ -165,7 +159,7 @@ body{
     max-width: 50rem;
     border: 1px solid black;
     border-radius: 10px;
-    background-color: #E84;
+    background-color: var(--primario);
     padding: 0.6rem 0;
     display: grid;
     grid-template-rows: repeat(4, auto);
@@ -176,7 +170,7 @@ body{
     width: 80%;
     margin: 0 auto;
     padding: 0.5rem 0 2rem;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--texto-primario);
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
@@ -207,7 +201,7 @@ body{
     font-size: 1.65rem;
     font-weight: bold;
     margin-bottom: 0.8rem;
-    color: #EEE;
+    color: var(--texto-primario);
 }
 
 .formulario__boton {
@@ -216,10 +210,17 @@ body{
     padding: 0.5rem 0.8rem;
     border: 1px solid black;
     border-radius: 5px;
-    background-color: #09F;
-    color: #EEE;
+    background-color: var(--secundario);
+    color: var(--texto-secundario);
     font-size: 1.2rem;
     cursor: pointer;
+}
+
+.formulario__boton:hover {
+    color: var(--texto-primario);
+    background-color: var(--terciario);
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .seccion__input {
@@ -240,32 +241,11 @@ body{
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    gap: 0.7rem 1rem;
+    gap: 1rem;
 }
 
 .remitente__anonimo {
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    gap: 0.2rem;
     position: relative;
-}
-
-.anonimo__label {
-    width: 7rem;
-    height: 2.5rem;
-    padding-right: 0.5rem;
-    border: 1px solid black;
-    border-radius: 5px;
-    background-color: rgb(158, 87, 0);
-    text-align: end;
-    line-height: 2.5rem;
-    cursor: pointer;
-}
-
-.anonimo__label:hover {
-    background-color: #D73;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
 .estilos__opcion {
@@ -277,21 +257,61 @@ body{
 
 .estilos__label {
     cursor: pointer;
-    font-size: 1.25rem;
-    color: #EEE;
+    font-size: 1.35rem;
+    color: var(--texto-secundario);
+}
+
+.estilos__label--1 {
+    font-family: var(--fuente-estilo-1);
+}
+
+.estilos__label--2 {
+    font-family: var(--fuente-estilo-2);
+}
+
+.estilos__label--3 {
+    font-family: var(--fuente-estilo-3);
+}
+
+.anonimo__tooltip {
+    padding: 0.3rem 0;
+    width: 5rem;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    border-radius: 5px;
+    background-color: var(--cuaternario);
+    translate: 0.5rem -30%;
+    text-align: center;
+    color: var(--texto-primario);
+    display: none;
 }
 
 /* **Íconos** */
 .icono {
+    width: 1.5rem;
+    height: 1.5rem;
+    display: inline-block;
     position: absolute;
     top: 50%;
     left: 0.3rem;
-    translate: 0 -50%
+    translate: 0 -50%;
+    background-color: var(--texto-terciario);
+}
+
+.icono--remitente {
+    mask: url("../img/icons/remitente.svg") no-repeat center;
+}
+
+.icono--destinatario {
+    mask: url("../img/icons/destinatario.svg") no-repeat center;
 }
 
 .icono--mensaje {
     position: relative;
-    translate: 0 -60%;
+    translate: -30% -55%;
+    background-color: var(--texto-secundario);
+    mask: url("../img/icons/mensaje.svg") no-repeat center;
 }
 
 /* **Inputs** */
@@ -304,11 +324,12 @@ body{
     padding-left: 1.8rem;
     border: 1px solid black;
     border-radius: 5px;
+    color: var(--texto-terciario);
 }
 
 .formulario__input--text:focus {
     outline: none;
-    border: 2px solid #09F;
+    border: 2px solid var(--texto-secundario);
 }
 
 /* Radio */
@@ -319,7 +340,7 @@ body{
     margin: 0;
     appearance: none;
     cursor: pointer;
-    background-color: black;
+    background-color: var(--texto-primario);
     mask: url("../img/icons/radio-1.svg") no-repeat center;
 }
 
@@ -328,6 +349,7 @@ body{
 }
 
 .formulario__input--radio:checked {
+    transform: scale(1.25);
     mask: url("../img/icons/radio-3.svg") no-repeat center;
 }
 
@@ -337,11 +359,17 @@ body{
     width: 1.5rem;
     height: 1.5rem;
     appearance: none;
-    position: absolute;
-    left: 0.5rem;
     cursor: pointer;
-    background-color: black;
+    background-color: var(--texto-secundario);
     mask: url("../img/icons/incognito-1.svg") no-repeat center;
+}
+
+.formulario__input--checkbox:hover {
+    transform: scale(1.25)
+}
+
+.formulario__input--checkbox:hover ~ .anonimo__tooltip {
+    display: block;
 }
 
 .formulario__input--checkbox:checked {
@@ -355,13 +383,14 @@ body{
     width: 18rem;
     height: 10rem;
     border: 1px solid black;
-    border-radius: 4px;
+    border-radius: 6px;
     resize: none;
+    color: var(--texto-terciario);
 }
 
 .formulario__textarea:focus {
     outline: none;
-    border: 2px solid #09F;
+    border: 2px solid var(--texto-secundario);
 }
 
 /* ***Estilos para el contador*** */
@@ -464,25 +493,16 @@ body{
 
     /* ***Estilos para el formulario*** */
     .formulario {
+        padding: 0;
         display: grid;
         grid-template-rows: repeat(3, auto);
-        grid-template-columns: 2fr 3fr;
-        gap: 1rem 0;
+        grid-template-columns: 1fr 2fr;
+        gap: 0;
     }
 
     .formulario__seccion {
-        width: 90%;
-        margin: 0 auto;
-        padding: 0.5rem 0 2rem;
-        border-bottom: 1px solid black;
-        display: flex;
-        flex-flow: column nowrap;
-        align-items: center;
-    }
-
-    .formulario__seccion:last-child {
-        border-bottom: none;
-        padding-bottom: 0.5rem;
+        padding: 2rem 0;
+        width: 100%;
     }
 
     .formulario__seccion--remitente {
@@ -492,24 +512,32 @@ body{
 
     .formulario__seccion--destinatario {
         grid-row: 2/3;
-        grid-column: 1/3;
+        grid-column: 2/3;
     }
     
     .formulario__seccion--estilos {
-        width: 80%;
+        border-right: 1px solid var(--texto-primario);
         border-bottom: none;
         text-align: center;
-        grid-row: 3/4;
+        grid-row: 2/4;
         grid-column: 1/2;
     }
     
     .formulario__seccion--mensaje {
-        width: 80%;
+        box-sizing: content-box;
+        margin: 0 auto;
         grid-row: 3/4;
         grid-column: 2/3;
     }
 
     .seccion__estilos {
-        gap: 1.5rem;
+        height: 100%;
+        margin-top: 2rem;
+        align-content: space-between;
+        gap: 0;
+    }
+
+    .formulario__textarea {
+        width: 20rem;
     }
 }

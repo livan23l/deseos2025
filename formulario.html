@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
-    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -17,12 +17,12 @@
             <label for="remitente" class="formulario__label">Remitente</label>
             <div class="seccion__remitente">
                 <div class="seccion__input">
-                    <img src="img/icons/remitente.svg" alt="Remitente" class="icono">
+                    <i class="icono icono--remitente"></i>
                     <input type="text" name="remitente" id="remitente" placeholder="Tu nombre" class="formulario__input--text">
                 </div>
                 <div class="remitente__anonimo">
                     <input type="checkbox" name="anonimo" id="anonimo" class="formulario__input--checkbox">
-                    <label for="anonimo" class="anonimo__label">Anónimo</label>
+                    <div class="anonimo__tooltip">Marcar como anónimo</div>
                 </div>
             </div>
         </div>
@@ -31,7 +31,7 @@
         <div class="formulario__seccion formulario__seccion--destinatario">
             <label for="destinatario" class="formulario__label">Destinatario</label>
             <div class="seccion__input">
-                <img src="img/icons/destinatario.svg" alt="Destinatario" class="icono">
+                <i class="icono icono--destinatario"></i>
                 <input type="text" name="destinatario" id="destinatario" placeholder="La persona que la recibirá" class="formulario__input--text">
             </div>
         </div>
@@ -60,7 +60,7 @@
 
         <!-- Mensaje -->
         <div class="formulario__seccion formulario__seccion--mensaje">
-            <label for="mensaje" class="formulario__label">Mensaje <img src="img/icons/mensaje.svg" alt="Mensaje" class="icono icono--mensaje"></label>
+            <label for="mensaje" class="formulario__label">Mensaje <i class="icono icono--mensaje"></i></label>
             <div class="seccion__input">
                 <textarea name="mensaje" id="mensaje" placeholder="El mensaje de la carta" class="formulario__textarea"></textarea>
             </div>

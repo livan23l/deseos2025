@@ -337,6 +337,57 @@ body{
     border: 2px solid var(--texto-secundario);
 }
 
+.nosotros {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin:5rem 2rem;
+}
+
+.contenedor{
+    width: 25rem;
+    height: 25rem;
+    background-color: var(--secundario);
+    color:white;
+    padding: 2rem;
+    border-radius: 5%;
+    margin: 2rem;
+}
+
+.titulo{
+    background-color: var(--cuaternario);
+    text-align: center;
+    font-family: var(--fuente-estilo-1);
+    border-radius: 0%;
+}
+
+.card-contenedor{
+    font-family: var(--fuente-estilo-2);
+    padding: 2rem;
+    text-align: justify;
+}
+.nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    margin: 2rem;
+    gap:2rem;
+    font-size: 1.5rem;
+}
+
+.nav a{
+    align-items:center;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.nav a:hover{
+    color: var(--secundario);
+    font-size: 2rem;
+}
 /* ***Media Query*** */
 @media(width > 36rem) {
     .header{
@@ -409,5 +460,56 @@ body{
 
     .formulario__textarea {
         width: 20rem;
+    }
+
+    .nosotros{
+        display:flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: stretch;
+        padding: 2rem;
+        margin:2rem;
+    }
+
+    .contenedor{
+        width: 50rem;
+        height: 25rem;
+        background-color: var(--secundario);
+        color:white;
+        padding:2rem;
+        margin: 3rem;
+    }
+
+    .titulo{
+        background-color: var(--cuaternario);
+        text-align: center; 
+        font-size: 2rem;
+    }
+    
+    .card-contenedor{
+        text-align: justify;
+        font-size: 1.5rem;
+    }
+
+    .nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+        margin: 2rem;
+        gap:3rem;
+        font-size: 1.5rem;
+    }
+
+    .nav a{
+        align-items:center;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    .nav a:hover{
+        color: var(--secundario);
+        font-size: 2rem;
     }
 }

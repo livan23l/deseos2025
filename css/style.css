@@ -435,7 +435,7 @@ body{
 
 .principal__titulo, .principal__footer {
     margin: 0;
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     letter-spacing: 5px;
 }
 
@@ -447,7 +447,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    font-size: 1.8rem;
+    font-size: 2.5rem;
     background-color: var(--cuaternario);
     font-weight: bold;
     color: var(--texto-primario);

@@ -42,33 +42,21 @@
 /* ***Estilos Generales*** */
 
 body{
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    gap: 1rem;
     font-family: var(--fuente-principal);
+    min-height: 100dvh;
     letter-spacing: 0.1rem;
     word-spacing: 0.4rem;
     text-transform: capitalize;
     background: radial-gradient(circle, var(--texto-terciario), var(--secundario), var(--primario));
 }
 
-.main{
-    padding: 0 0.5rem;
-}
-
-.main__titulo {
-    margin: 0 auto;
-    padding: 1rem 2rem;
-    width: fit-content;
-    text-align: center;
-    background-color: var(--primario);
-    font-size: 2rem;
-    color: var(--texto-primario);
-    border-radius: 10px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
-    text-shadow: 5px 5px 8px rgba(0, 0, 0, 0.8);
-}
-
 /* ***Estilos para el Header*** */
 
 .header{
+    grid-row: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -119,6 +107,24 @@ body{
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
+/* ***Estilos main*** */
+.main{
+    grid-row: 2;
+    padding: 0 0.5rem;
+}
+
+.main__titulo {
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    width: fit-content;
+    text-align: center;
+    background-color: var(--primario);
+    font-size: 2rem;
+    color: var(--texto-primario);
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
+    text-shadow: 5px 5px 8px rgba(0, 0, 0, 0.8);
+}
 
 /* ***Estilos para la parte principal*** */
 .nosotros {
@@ -609,6 +615,23 @@ body{
 
 .gif{
     width: 15rem;
+}
+
+/*Estilos footer*/
+.footer{
+    grid-row: 3;
+    background-color: var(--primario);
+    padding: 1rem;
+    text-align: center;
+}
+
+.enlace__footer{
+    text-decoration: none;
+    color: var(--texto-primario);
+}
+
+.enlace__footer:hover{
+    color:var(--texto-secundario);
 }
 
 /* ***Media Query*** */

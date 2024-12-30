@@ -249,12 +249,17 @@ body{
     justify-content: center;
     gap: 1rem;
 }
-.seccion__color {
-    width: 80%;
+
+.seccion__colores {
     margin-top: 0.4rem;
+    padding: 1.5rem 1rem;
+    padding-left: 0.5rem;
+    width: 80%;
+    border-radius: 10px;
+    background-color: var(--secundario);
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
+    justify-content: space-around;
     gap: 1rem;
 }
 
@@ -268,7 +273,8 @@ body{
     align-items: center;
     gap: 0.5rem;
 }
-.color__opcion {
+
+.colores__opcion {
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
@@ -276,11 +282,30 @@ body{
     padding-bottom: 0.5rem;
 }
 
-.imagen{
-    padding: 0.6rem;
-    border-top: 1px solid white;
-    border-bottom: 1px solid white;
+.opcion__color {
+    box-sizing: border-box;
+    width: 3rem;
+    height: 3rem;
+    border-top: 1.5px solid var(--texto-primario);
+    border-bottom: 1.5px solid var(--texto-primario);
     border-radius: 5px;
+    cursor: pointer;
+}
+
+.opcion__color:hover {
+    transform: scale(1.05)
+}
+
+.opcion__color--1 {
+    background-color: #2F0101;
+}
+
+.opcion__color--2 {
+    background-color: #000A32;
+}
+
+.opcion__color--3 {
+    background-color: #002701;
 }
 
 .estilos__label {
@@ -468,20 +493,21 @@ body{
         grid-row: 2/3;
         grid-column: 2/3;
     }
-    
+
     .formulario__seccion--estilos {
         border-right: 1px solid var(--texto-primario);
         text-align: center;
         grid-row: 1/3;
         grid-column: 1/2;
     }
+
     .formulario__seccion--color {
         border-right: 1px solid var(--texto-primario);
         text-align: center;
         grid-row: 3/4;
         grid-column: 1/2;
     }
-    
+
     .formulario__seccion--mensaje {
         box-sizing: content-box;
         margin: 0 auto;
@@ -490,23 +516,6 @@ body{
     }
 
     .seccion__estilos {
-        height: 100%;
-        margin-top: 2rem;
-        align-content: space-between;
-        gap: 0;
-    }
-    .imagen{
-        padding: 0.6rem;
-        border-top: 1px solid white;
-        border-bottom: 1px solid white;
-        border-radius: 5px;
-    }
-
-    .seccion__color {
-        display: flex;
-        flex-direction: column; 
-        flex-wrap: nowrap;
-        align-items: center;
         height: 100%;
         margin-top: 2rem;
         align-content: space-between;

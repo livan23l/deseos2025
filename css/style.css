@@ -49,6 +49,10 @@ body{
     background: radial-gradient(circle, var(--texto-terciario), var(--secundario), var(--primario));
 }
 
+.oculto {
+    display: none !important;
+}
+
 .main{
     padding: 0 0.5rem;
 }

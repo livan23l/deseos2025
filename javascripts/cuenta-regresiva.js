@@ -1,18 +1,39 @@
-const htmlDias = document.getElementById('dias');
-const htmlHoras = document.getElementById('horas');
-const htmlMinutos = document.getElementById('minutos');
-const htmlSegundos = document.getElementById('segundos');
-
 const fechaObjetivo = new Date(2025, 0, 1, 0, 0, 0);
+
+let htmlDias, htmlHoras, htmlMinutos, htmlSegundos, htmlOculto;
 let diferencia;
 
-function fechaDiferencia(fecha1, fecha2) {
+function fechaDiferencia(fechaObj, fechaAct) {
     let segundos;
 
-    if(fecha1 > fecha2) {
-        segundos = fecha1 - fecha2;
+    if(fechaObj > fechaAct) {
+        segundos = fechaObj - fechaAct;
+        // Hacemos que la cuenta regresiva no esté oculta:
+        htmlOculto = document.getElementById('cuenta-regresiva');
+        htmlOculto.classList.remove('oculto');
+        
+        // Ocultamos la cuenta progresiva:
+        htmlOculto = document.getElementById('cuenta-progresiva');
+        htmlOculto.classList.add('oculto');
+
+        htmlDias = document.getElementById('reg-dias');
+        htmlHoras = document.getElementById('reg-horas');
+        htmlMinutos = document.getElementById('reg-minutos');
+        htmlSegundos = document.getElementById('reg-segundos');
     } else {
-        segundos = fecha2 - fecha1;
+        segundos = fechaAct - fechaObj;
+        // Hacemos que la cuenta regresiva no esté oculta:
+        htmlOculto = document.getElementById('cuenta-regresiva');
+        htmlOculto.classList.add('oculto');
+
+        // Ocultamos la cuenta progresiva:
+        htmlOculto = document.getElementById('cuenta-progresiva');
+        htmlOculto.classList.remove('oculto');
+
+        htmlDias = document.getElementById('pro-dias');
+        htmlHoras = document.getElementById('pro-horas');
+        htmlMinutos = document.getElementById('pro-minutos');
+        htmlSegundos = document.getElementById('pro-segundos');
     }
 
     return Math.floor(segundos / 1000);
@@ -21,7 +42,7 @@ function fechaDiferencia(fecha1, fecha2) {
 setInterval(() => {
     let fechaActual = new Date();
     let segundos, minutos, horas, dias;
-    segundos = fechaDiferencia(fechaActual, fechaObjetivo);
+    segundos = fechaDiferencia(fechaObjetivo, fechaActual);
 
     // Días
     dias = Math.floor(segundos / 86400).toString().padStart(2, '0');

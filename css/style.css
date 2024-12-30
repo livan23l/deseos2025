@@ -623,6 +623,62 @@ body{
     width: 15rem;
 }
 
+/*Estilos de carta generada*/
+.contenedor__carta{
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagen__mostrar__carta{
+    width: 20rem; 
+    height: 25rem; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primario);
+    border-radius: 10px; 
+    overflow: hidden; 
+    margin: 1rem auto;
+    border: 1px solid black;
+}
+
+.carta__generada{
+    max-width: 90%;
+    max-height: 90%; 
+    border-radius: 10px;
+    object-fit: contain; 
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.8);
+}
+
+.botones__mostrar__carta{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.botones__mostrar{
+    margin: 0.5rem auto 0.3rem;
+    padding: 0.5rem 0.8rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: var(--primario);
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--texto-secundario);
+}
+
+.botones__mostrar:hover{
+    color: var(--texto-primario);
+    background-color: var(--terciario);
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
 /* ***Media Query*** */
 @media(width > 36rem) {
     /* ***Estilos para el header*** */
@@ -708,4 +764,30 @@ body{
     .formulario__textarea {
         width: 20rem;
     }
+
+    /* ***Estilos carta generada*** */
+    .contenedor__carta{
+        max-width: 100dvw;
+        max-height: 50em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .imagen__mostrar__carta{
+        width: 27rem; 
+        height: 30rem; 
+    }
+    
+    .carta__generada{
+        max-width: 80%;
+        max-height: auto; 
+    }
+    
+    .botones__mostrar__carta{
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }    
 }

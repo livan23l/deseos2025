@@ -70,6 +70,14 @@ body{
     text-shadow: 5px 5px 8px rgba(0, 0, 0, 0.8);
 }
 
+.main__cargando {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+}
+
 /* ***Estilos para el Header*** */
 
 .header{

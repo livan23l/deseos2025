@@ -1,4 +1,5 @@
 const fechaObjetivo = new Date(2025, 0, 1, 0, 0, 0);
+const gifCargando = document.getElementById('gif-cargando')
 
 let htmlDias, htmlHoras, htmlMinutos, htmlSegundos, htmlOculto;
 let diferencia;
@@ -47,11 +48,11 @@ setInterval(() => {
     // Días
     dias = Math.floor(segundos / 86400).toString().padStart(2, '0');
     segundos -= (86400 * dias);
-    
+
     // Horas
     horas = Math.floor(segundos / 3600).toString().padStart(2, '0');
     segundos -= (3600 * horas);
-    
+
     // Minutos
     minutos = Math.floor(segundos / 60).toString().padStart(2, '0');
     segundos = (segundos - (60 * minutos)).toString().padStart(2, '0');;
@@ -60,4 +61,6 @@ setInterval(() => {
     htmlMinutos.innerHTML = minutos;
     htmlHoras.innerHTML = horas;
     htmlDias.innerHTML = dias;
+
+    gifCargando.classList.add('oculto');
 }, 1000);

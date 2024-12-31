@@ -767,6 +767,7 @@ body{
     background-color: var(--terciario);
     transform: scale(1.05);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
 
 /* ***Estilos carta*** */
 .carta {
@@ -1097,7 +1098,8 @@ body{
 
     .carta__generada{
         max-width: 80%;
-        max-height: auto; 
+        max-height: auto;
+    }
 
     /* ***Estilos para el contador*** */
     .contenedor__titulo {

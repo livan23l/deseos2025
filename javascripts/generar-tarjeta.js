@@ -140,9 +140,11 @@ btnVolverAGenerar.addEventListener("click", function(event) {
 const btnDescargarCarta = document.getElementById('boton-descargar-carta');
 
 btnDescargarCarta.addEventListener("click", function () {
-    html2canvas(carta).then(function (canvas) {
+    html2canvas(carta, {
+        scale: 10
+    }).then(function (canvas) {
         var link = document.createElement('a');
-        link.href = canvas.toDataURL();
+        link.href = canvas.toDataURL('image/jpeg', 1.0);
         link.download = 'carta.jpg';
         link.click();
     });

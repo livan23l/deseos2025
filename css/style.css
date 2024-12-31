@@ -214,7 +214,7 @@ body{
 
 /* **Footer** */
 .footer{
-    margin-top: 1rem;
+    margin-top: 2rem;
     grid-row: 3/4;
     background-color: var(--primario);
     padding: 1rem;
@@ -305,7 +305,7 @@ body{
 
 /* ***Estilos para el carrusel*** */
 .carrusel {
-    margin: 1rem auto;
+    margin: 1rem auto 0;
     padding: 1rem 0;
     width: 100%;
     max-width: 50rem;
@@ -419,7 +419,7 @@ body{
 
 .formulario__boton {
     display: block;
-    margin: 1.5rem auto 1rem;
+    margin: 1.5rem auto 0;
     padding: 0.5rem 0.8rem;
     border: 1px solid black;
     border-radius: 5px;
@@ -713,11 +713,8 @@ body{
     width: 15rem;
 }
 
-
 /* ***Estilos para carta generada*** */
 .contenedor__generada{
-    width: 100%;
-    min-height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;

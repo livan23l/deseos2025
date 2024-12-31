@@ -190,7 +190,7 @@ body{
     position: absolute;
     top: 50%;
     left: 50%;
-    translate: -50% -50%;
+    translate: -50% -25%;
     z-index: -1;
 }
 
@@ -946,6 +946,7 @@ body{
         font-size: 1rem;
     }
 
+    /* **Header** */
     .header{
         flex-direction: row;
         justify-content: space-around;
@@ -967,6 +968,11 @@ body{
 
     .navegacion__elemento{
         padding: 0.8rem 0.5rem;
+    }
+
+    /* **Main** */
+    .main__cargando {
+        translate: -50% -50%;
     }
 
     /* ***Estilos para la parte principal*** */

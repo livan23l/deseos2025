@@ -2,11 +2,9 @@ const anterior = document.getElementById("boton-anterior");
 const siguiente = document.getElementById("boton-siguiente");
 const imagen = document.getElementById("carrusel-imagen");
 
-const imagenes = ["../img/imagen-1.jpg",
-                  "../img/imagen-2.jpg",
-                  "../img/imagen-3.jpg",
-                  "../img/imagen-4.jpg",
-                  "../img/imagen-5.png"];
+const imagenes = ["../img/carrusel/imagen-1.webp",
+                  "../img/carrusel/imagen-2.webp",
+                  "../img/carrusel/imagen-3.webp",];
 
 let i = 0;
 

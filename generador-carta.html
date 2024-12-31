@@ -17,7 +17,7 @@
     </header>
 
     <!-- Formulario -->
-    <main class="main">
+    <main class="main" id="main-formulario">
         <h2 class="main__titulo">Genera tu propia carta de año nuevo</h2>
 
         <!-- Formulario para generar cartas -->
@@ -52,18 +52,18 @@
 
                 <div class="seccion__estilos">
                     <div class="estilos__opcion">
-                        <input type="radio" name="estilo" id="estilo_1" value="1" class="formulario__input--radio" checked>
-                        <label for="estilo_1" class="estilos__label estilos__label--1">Estilo 1</label>
+                        <input type="radio" name="estilo" id="estilo-1" value="1" class="formulario__input--radio" checked>
+                        <label for="estilo-1" class="estilos__label estilos__label--1">Estilo 1</label>
                     </div>
 
                     <div class="estilos__opcion">
-                        <input type="radio" name="estilo" id="estilo_2" value="2" class="formulario__input--radio">
-                        <label for="estilo_2" class="estilos__label estilos__label--2">Estilo 2</label>
+                        <input type="radio" name="estilo" id="estilo-2" value="2" class="formulario__input--radio">
+                        <label for="estilo-2" class="estilos__label estilos__label--2">Estilo 2</label>
                     </div>
 
                     <div class="estilos__opcion">
-                        <input type="radio" name="estilo" id="estilo_3" value="3" class="formulario__input--radio">
-                        <label for="estilo_3" class="estilos__label estilos__label--3">Estilo 3</label>
+                        <input type="radio" name="estilo" id="estilo-3" value="3" class="formulario__input--radio">
+                        <label for="estilo-3" class="estilos__label estilos__label--3">Estilo 3</label>
                     </div>
                 </div>
             </div>
@@ -74,18 +74,18 @@
 
                 <div class="seccion__colores">
                     <div class="colores__opcion">
-                        <input type="radio" name="color" id="color_1" value="1" class="formulario__input--radio" checked>
-                        <label for="color_1" class="opcion__color color-1"></label>
+                        <input type="radio" name="color" id="color-1" value="1" class="formulario__input--radio" checked>
+                        <label for="color-1" class="opcion__color color-1"></label>
                     </div>
 
                     <div class="colores__opcion">
-                        <input type="radio" name="color" id="color_2" value="2" class="formulario__input--radio">
-                        <label for="color_2" class="opcion__color color-2"></label>
+                        <input type="radio" name="color" id="color-2" value="2" class="formulario__input--radio">
+                        <label for="color-2" class="opcion__color color-2"></label>
                     </div>
 
                     <div class="colores__opcion">
-                        <input type="radio" name="color" id="color_3" value="3" class="formulario__input--radio">
-                        <label for="color_3" class="opcion__color color-3"></label>
+                        <input type="radio" name="color" id="color-3" value="3" class="formulario__input--radio">
+                        <label for="color-3" class="opcion__color color-3"></label>
                     </div>
                 </div>
             </div>
@@ -103,42 +103,38 @@
     </main>
 
     <!-- Carta creada -->
-    <div class="main oculto">
+    <div class="main oculto" id="main-carta">
         <h2 class="main__titulo">Carta generada</h2>
 
         <div class="contenedor__generada">
             <!-- Carta generada -->
             <div class="generada__carta">
-                <div class="carta color-3">
+                <div class="carta" id="carta">
                     <!-- Sección superior -->
                     <div class="carta__arriba">
                         <img src="img/carta/esferas-1.png" alt="esferas-1" class="carta__imagen carta__imagen--arriba-1">
                         <img src="img/carta/esferas-2.png" alt="esferas-2" class="carta__imagen carta__imagen--arriba-2">
                         <img src="img/carta/esferas-2.png" alt="esferas-2" class="carta__imagen carta__imagen--arriba-3">
                     </div>
-            
+
                     <!-- Sección principal -->
                     <div class="carta__principal">
-                        <div class="carta__titulo estilo-3-titulo">
-                            <div class="carta__titulo--destinatario">1234567890</div>
+                        <div class="carta__titulo" id="carta-titulo">
+                            <div class="carta__titulo--destinatario" id="carta-destinatario"></div>
                             <div class="carta__titulo--titulo">Feliz año</div>
                         </div>
-            
+
                         <div class="carta__year">
                             <img src="img/carta/20.png" alt="20" class="carta__imagen carta__imagen--principal-1">
                             <img src="img/carta/copas.png" alt="copas" class="carta__imagen carta__imagen--principal-2">
                             <img src="img/carta/25.png" alt="25" class="carta__imagen carta__imagen--principal-3">
                             <img src="img/carta/sombrero.png" alt="sombrero" class="carta__imagen carta__imagen--principal-4">
                         </div>
-                        <div class="carta__remitente estilo-3-subtitulo">De parte de 1234567890</div>
-            
-                        <div class="carta__mensaje estilo-3-cuerpo">
-                            1234 6789 1234 6789 1234 6789 1234 6789 1234 6789 1234 6789 <!-- 60 -->
-                            1234 6789 1234 6789 1234 6789 1234 6789 1234 6789 1234 6789 <!-- 60 -->
-                            1234
-                        </div>
+                        <div class="carta__remitente" id="carta-subtitulo"></div>
+
+                        <div class="carta__mensaje" id="carta-mensaje"></div>
                     </div>
-            
+
                     <!-- Sección inferior -->
                     <div class="carta__abajo">
                         <div class="abajo__globos abajo__globos--1">
@@ -146,13 +142,13 @@
                             <img src="img/carta/globo.png" alt="globo" class="globos__globo globos__globo--2">
                             <img src="img/carta/globo.png" alt="globo" class="globos__globo globos__globo--3">
                         </div>
-            
+
                         <div class="abajo__centro">
                             <img src="img/carta/fuegos-artificiales.png" alt="fuegos-artificiales" class="carta__imagen carta__imagen--abajo-1">
                             <img src="img/carta/fuego-artificial.png" alt="fuego-artificial" class="carta__imagen carta__imagen--abajo-2">
                             <img src="img/carta/fuegos-artificiales.png" alt="fuegos-artificiales" class="carta__imagen carta__imagen--abajo-3">
                         </div>
-            
+
                         <div class="abajo__globos abajo__globos--2">
                             <img src="img/carta/globo.png" alt="globo" class="globos__globo globos__globo--1">
                             <img src="img/carta/globo.png" alt="globo" class="globos__globo globos__globo--2">
@@ -164,8 +160,8 @@
 
             <!-- Botones regenera carta o descargar carta -->
             <div class="generada__botones">
-                <button type="button" class="botones__boton">Volver a generar</button>
-                <button type="button" class="botones__boton">Descargar carta</button>
+                <button type="button" class="botones__boton" id="boton-volver-a-generar">Volver a generar</button>
+                <button type="button" class="botones__boton" id="boton-descargar-carta">Descargar carta</button>
             </div>
         </div>
     </div>
@@ -174,6 +170,7 @@
         <a href="https://github.com/livan23l/deseos2025" class="footer__enlace">Ver proyecto</a>
     </footer>
 
+    <script src="javascripts/html2canvas.min.js"></script>
     <script src="javascripts/generar-tarjeta.js"></script>
 </body>
 </html>

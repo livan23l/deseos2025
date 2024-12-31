@@ -46,6 +46,36 @@ body{
     letter-spacing: 0.1rem;
     word-spacing: 0.4rem;
     text-transform: capitalize;
+    background: radial-gradient(circle, var(--texto-terciario), var(--secundario), var(--primario));
+}
+
+.oculto {
+    display: none !important;
+}
+
+.main{
+    padding: 0 0.5rem;
+}
+
+.main__titulo {
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    width: fit-content;
+    text-align: center;
+    background-color: var(--primario);
+    font-size: 2rem;
+    color: var(--texto-primario);
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
+    text-shadow: 5px 5px 8px rgba(0, 0, 0, 0.8);
+}
+
+.main__cargando {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
 }
 
 .color-1 {
@@ -111,7 +141,10 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     background-color: var(--primario);
+    margin: 0;
+    margin-bottom: 3rem;
 }
 
 .header__titulo{
@@ -119,10 +152,14 @@ body{
     font-size: 2.5rem;
     margin: 0;
     margin-top: 1rem;
+    text-decoration: none;
+}
+
+.header__titulo:hover{
+    color:var(--texto-secundario);
 }
 
 .header__navegacion{
-    width: 100%;
     max-width: 80rem;
     margin: 0.5rem 0;
     padding: 0.5rem;
@@ -154,7 +191,7 @@ body{
 
 /* ***Estilos para la parte principal*** */
 .nosotros {
-    margin: 1rem auto;
+    margin: 0 auto 3rem;
     width: 100%;
     max-width: 60rem;
     padding: 1.5rem 0 3rem;
@@ -211,7 +248,7 @@ body{
     margin: 0;
     font-size: 1.1rem;
     letter-spacing: 0.15rem;
-    line-height: 2.3rem;
+    line-height: 1.9rem;
     text-align: justify;
     font-family: var(--fuente-principal);
     text-shadow: 3px 3px 10px rgba(0, 0, 0, 1);
@@ -310,7 +347,6 @@ body{
 
 .formulario__seccion--remitente {
     grid-row: 1/2;
- 
 }
 
 .formulario__seccion--destinatario {
@@ -338,13 +374,13 @@ body{
 
 .formulario__boton {
     display: block;
-    margin: 0.5rem auto;
+    margin: 1.5rem auto 1rem;
     padding: 0.5rem 0.8rem;
     border: 1px solid black;
     border-radius: 5px;
-    background-color: var(--secundario);
+    background-color: var(--primario);
     color: var(--texto-secundario);
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     cursor: pointer;
 }
 
@@ -382,7 +418,6 @@ body{
     padding-left: 0.5rem;
     width: 80%;
     border-radius: 10px;
-    background-color: var(--secundario);
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
@@ -419,7 +454,7 @@ body{
 }
 
 .opcion__color:hover {
-    transform: scale(1.05)
+    transform: scale(1.05);
 }
 
 .estilos__label {
@@ -562,7 +597,7 @@ body{
 
 /* ***Estilos para el contador*** */
 .contenedor{
-    margin: 1rem auto;
+    margin: 0 auto;
     padding: 2rem;
     min-width: 20rem;
     max-width: 40rem;
@@ -844,7 +879,7 @@ body{
         min-width: fit-content;
         text-align: center;
     }
-    
+
     .header__navegacion{
         flex-direction: row;
         justify-content: flex-end;
@@ -852,6 +887,11 @@ body{
 
     .navegacion__elemento{
         padding: 1rem 0.5rem;
+    }
+
+    /* ***Estilos para la parte principal*** */
+    .articulo__parrafo{
+        line-height: 2.3rem;
     }
 
     /* ***Estilos para el formulario*** */

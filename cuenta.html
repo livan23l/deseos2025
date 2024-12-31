@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuenta</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="body">
+    <header class="header">
+        <a href="index.html" class="header__titulo">Deseos 2025</a>
+        <nav class="header__navegacion">
+            <a href="generador-carta.html" class="navegacion__elemento">Generador de carta</a>
+            <a href="cuenta.html" class="navegacion__elemento">Cuenta regresiva</a>
+        </nav>
+    </header>
+
+    <main class="main">
+        <!-- Gif de carga -->
+        <div class="main__cargando">
+            <img src="img/gifs/cargando.gif" alt="Cargando" class="gif">
+        </div>
+
+        <!-- Cuenta regresiva -->
+        <div class="contenedor oculto" id="cuenta-regresiva">
+            <h1 class="contenedor__titulo">Cuenta regresiva 2025</h1>
+
+            <div class="contenedor__principal">
+                <h3 class="principal__titulo">Faltán</h3>
+                <div class="principal__contador">
+                    <div class="contador__dias" id="reg-dias">DD</div>
+                    <div class="contador__horas" id="reg-horas">HH</div>
+                    <div class="contador__minutos" id="reg-minutos">MM</div>
+                    <div class="contador__segundos" id="reg-segundos">SS</div>
+                </div>
+                <p class="principal__footer">Para año nuevo</p>
+            </div>
+
+            <div class="contenedor__footer">
+                <img class="gif" src="img/gifs/esperar.gif" alt="Esperando...">
+            </div>
+        </div>
+
+        <!-- Cuenta progresiva -->
+        <div class="contenedor oculto" id="cuenta-progresiva">
+            <h1 class="contenedor__titulo">Ya estamos en el 2025</h1>
+
+            <div class="contenedor__principal">
+                <h3 class="principal__titulo">Han pasado</h3>
+                <div class="principal__contador">
+                    <div class="contador__dias" id="pro-dias">DD</div>
+                    <div class="contador__horas" id="pro-horas">HH</div>
+                    <div class="contador__minutos" id="pro-minutos">MM</div>
+                    <div class="contador__segundos" id="pro-segundos">SS</div>
+                </div>
+                <p class="principal__footer">Desde el inicio del 2025</p>
+            </div>
+
+            <div class="contenedor__footer">
+                <img class="gif" src="img/gifs/Fuegos.png" alt="Esperando...">
+            </div>
+        </div>
+    </main>
+    
+    <script src="javascripts/cuenta-regresiva.js"></script>
+</body>
+</html>

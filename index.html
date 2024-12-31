@@ -1,14 +1,64 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Principal</title>
+    <title>Página principal</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
+<body class="body">
+    <header class="header">
+        <a href="index.html" class="header__titulo">Deseos 2025</a>
+        <nav class="header__navegacion">
+            <a href="generador-carta.html" class="navegacion__elemento">Generador de carta</a>
+            <a href="cuenta.html" class="navegacion__elemento">Cuenta regresiva</a>
+        </nav>
+    </header>
 
-<body>
+    <main class="main">
+        <!-- Sección principal -->
+        <section class="nosotros">
+            <h2 class="nosotros__titulo">Conoce acerca de esta página</h2>
 
+            <div class="nosotros__articulos">
+                <article class="articulo">
+                    <h3 class="articulo__titulo">Sobre la página</h3>
+                    <p class="articulo__parrafo">
+                        Esta página te ayudará a <a href="generador-carta.html" class="parrafo__enlace">
+                        crear una carta de deseos del año 2025</a> para que la
+                        descargues y la puedas enviar a tus seridos queridos. No te
+                        olvides de visitar la sección de <a href="cuenta.html" class="parrafo__enlace">
+                        la cuenta regresiva</a> para que veas cuánto tiempo falta para
+                        año nuevo.
+                    </p>
+                </article>
+        
+                <article class="articulo">
+                    <h3 class="articulo__titulo">Acerca de nosotros</h3>
+                    <p class="articulo__parrafo">
+                        Esta página fue creada desde cero por un grupo independiente de
+                        desarrolladores, motivados por la curiosidad de aprender más y
+                        por el deseo de crear una página novedosa y útil, alusiva a
+                        este año 2025.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Carrusel -->
+        <h2 class="main__titulo">Mira posibles diseños</h2>
+        <div class="carrusel">
+            <div class="carrusel__boton">
+                <button type="button" class="boton__anterior" id="boton-anterior"></button>
+            </div>
+            <img src="img/imagen-1.jpg" alt="Imagen de carrusel" class="carrusel__imagen" id="carrusel-imagen">
+            <div class="carrusel__boton">
+                <button type="button" class="boton__siguiente" id="boton-siguiente"></button>
+            </div>
+        </div>
+    </main>
+
+    <script src="javascripts/carrusel.js"></script>
 </body>
-
 </html>

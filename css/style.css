@@ -623,7 +623,7 @@ body{
     width: 15rem;
 }
 
-/* ***Estilos para la sección de carta generada*** */
+/* ***Estilos para carta generada*** */
 .contenedor__generada{
     width: 100%;
     min-height: 100%;
@@ -640,8 +640,7 @@ body{
     justify-content: center;
     align-items: center;
     background-color: var(--primario);
-    border-radius: 10px; 
-    overflow: hidden; 
+    border-radius: 10px;
     margin: 1rem auto;
     border: 1px solid black;
 }
@@ -765,29 +764,14 @@ body{
         width: 20rem;
     }
 
-    /* ***Estilos carta generada*** */
-    .contenedor__carta{
-        max-width: 100dvw;
-        max-height: 50em;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .imagen__mostrar__carta{
+    /* ***Estilos para carta generada*** */    
+    .generada__carta{
         width: 27rem; 
         height: 30rem; 
     }
-    
+
     .carta__generada{
         max-width: 80%;
         max-height: auto; 
     }
-    
-    .botones__mostrar__carta{
-        display: flex;
-        flex-direction: row;
-        gap: 1rem;
-    }    
 }

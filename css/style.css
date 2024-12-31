@@ -136,7 +136,7 @@ body{
 .nosotros {
     margin: 0 auto 3rem;
     width: 100%;
-    max-width: 60rem;
+    max-width: 45rem;
     padding: 1.5rem 0 3rem;
     border-radius: 10px;
     background-color: var(--primario);
@@ -562,7 +562,7 @@ body{
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 5rem;
+    gap: 2.5rem;
     color: var(--texto-secundario);
 }
 
@@ -651,8 +651,7 @@ body{
 
     /* ***Estilos para la parte principal*** */
     .nosotros {
-        max-width: 45rem;
-        padding: 1.5rem 0 3rem;
+        width: 80%;
     }
     
     .nosotros__titulo {

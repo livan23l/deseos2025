@@ -45,7 +45,6 @@
 body{
     display: grid;
     grid-template-rows: auto 1fr auto;
-    gap: 1rem;
     font-family: var(--fuente-principal);
     min-height: 100dvh;
     letter-spacing: 0.1rem;
@@ -215,6 +214,7 @@ body{
 
 /* **Footer** */
 .footer{
+    margin-top: 1rem;
     grid-row: 3/4;
     background-color: var(--primario);
     padding: 1rem;

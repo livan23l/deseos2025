@@ -57,7 +57,7 @@ body{
 /* **Header** */
 
 .header{
-    grid-row: 1;
+    grid-row: 1/2;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -110,7 +110,7 @@ body{
 
 /* **Main** */
 .main{
-    grid-row: 2;
+    grid-row: 2/3;
     padding: 0 0.5rem;
 }
 
@@ -129,7 +129,7 @@ body{
 
 /* **Footer** */
 .footer{
-    grid-row: 3;
+    grid-row: 3/4;
     background-color: var(--primario);
     padding: 1rem;
     text-align: center;

@@ -16,7 +16,8 @@
         </nav>
     </header>
 
-    <main class="main oculto">
+    <!-- Formulario -->
+    <main class="main">
         <h2 class="main__titulo">Genera tu propia carta de año nuevo</h2>
 
         <!-- Formulario para generar cartas -->
@@ -31,7 +32,7 @@
                     </div>
                     <div class="remitente__anonimo">
                         <input type="checkbox" name="anonimo" id="checkbox-anonimo" class="formulario__input--checkbox">
-                        <div class="anonimo__tooltip">Marcar como anónimo</div>
+                        <div class="anonimo__tooltip" id="anonimo-tooltip">Click para poner <span class="tooltip__span">anónimo</span></div>
                     </div>
                 </div>
             </div>
@@ -93,7 +94,7 @@
             <div class="formulario__seccion formulario__seccion--mensaje">
                 <label for="mensaje" class="formulario__label">Mensaje <i class="icono icono--mensaje"></i></label>
                 <div class="seccion__input">
-                    <textarea name="mensaje" id="mensaje" placeholder="El mensaje de la carta" class="formulario__textarea" maxlength="165"></textarea>
+                    <textarea name="mensaje" id="mensaje" placeholder="El mensaje de la carta" class="formulario__textarea" maxlength="165" required></textarea>
                 </div>
             </div>
         </form>
@@ -101,7 +102,8 @@
         <button type="submit" id="boton-generar" class="formulario__boton" form="formulario-generar">Generar carta</button>
     </main>
 
-    <div class="main">
+    <!-- Carta creada -->
+    <div class="main oculto">
         <h2 class="main__titulo">Carta generada</h2>
 
         <div class="contenedor__generada">
@@ -172,6 +174,6 @@
         <a href="https://github.com/livan23l/deseos2025" class="footer__enlace">Ver proyecto</a>
     </footer>
 
-    <script href="javascripts/formulario-tarjeta.js"></script>
+    <script src="javascripts/generar-tarjeta.js"></script>
 </body>
 </html>

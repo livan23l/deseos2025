@@ -509,11 +509,15 @@ body{
     top: 0;
     left: 100%;
     border-radius: 5px;
-    background-color: var(--cuaternario);
-    translate: 0.5rem -30%;
+    background-color: var(--terciario);
+    translate: 0.5rem -40%;
     text-align: center;
     color: var(--texto-primario);
     display: none;
+}
+
+.tooltip__span {
+    text-decoration: underline;
 }
 
 /* **Íconos** */

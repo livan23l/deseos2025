@@ -31,6 +31,7 @@
     --texto-primario: #E1E1E1;
     --texto-secundario: #ADE6FF;
     --texto-terciario: #133FC4;
+    --texto-cuaternario: #D78C00;
 
     /* Fuentes */
     --fuente-principal: 'Bebas Neue';
@@ -53,7 +54,7 @@ body{
     background: radial-gradient(circle, var(--texto-terciario), var(--secundario), var(--primario));
 }
 
-/* ***Estilos para el Header*** */
+/* **Header** */
 
 .header{
     grid-row: 1;
@@ -107,7 +108,7 @@ body{
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
 }
 
-/* ***Estilos main*** */
+/* **Main** */
 .main{
     grid-row: 2;
     padding: 0 0.5rem;
@@ -124,6 +125,27 @@ body{
     border-radius: 10px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6);
     text-shadow: 5px 5px 8px rgba(0, 0, 0, 0.8);
+}
+
+/* **Footer** */
+.footer{
+    grid-row: 3;
+    background-color: var(--primario);
+    padding: 1rem;
+    text-align: center;
+}
+
+.footer__enlace{
+    text-decoration: none;
+    color: var(--texto-primario);
+}
+
+.footer__enlace:hover{
+    color:var(--texto-secundario);
+}
+
+.footer__enlace:visited{
+    color:var(--texto-cuaternario);
 }
 
 /* ***Estilos para la parte principal*** */
@@ -615,23 +637,6 @@ body{
 
 .gif{
     width: 15rem;
-}
-
-/*Estilos footer*/
-.footer{
-    grid-row: 3;
-    background-color: var(--primario);
-    padding: 1rem;
-    text-align: center;
-}
-
-.enlace__footer{
-    text-decoration: none;
-    color: var(--texto-primario);
-}
-
-.enlace__footer:hover{
-    color:var(--texto-secundario);
 }
 
 /* ***Media Query*** */

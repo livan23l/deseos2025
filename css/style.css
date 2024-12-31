@@ -623,8 +623,8 @@ body{
     width: 15rem;
 }
 
-/*Estilos de carta generada*/
-.contenedor__carta{
+/* ***Estilos para la sección de carta generada*** */
+.contenedor__generada{
     width: 100%;
     min-height: 100%;
     display: flex;
@@ -633,7 +633,7 @@ body{
     align-items: center;
 }
 
-.imagen__mostrar__carta{
+.generada__carta{
     width: 20rem; 
     height: 25rem; 
     display: flex;
@@ -654,14 +654,14 @@ body{
     box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.8);
 }
 
-.botones__mostrar__carta{
+.generada__botones{
     display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    margin-bottom: 0.5rem;
+    flex-flow: row nowrap;
+    margin-top: 0.3rem;
+    gap: 1.2rem;
 }
 
-.botones__mostrar{
+.botones__boton{
     margin: 0.5rem auto 0.3rem;
     padding: 0.5rem 0.8rem;
     border: 1px solid black;
@@ -672,7 +672,7 @@ body{
     color: var(--texto-secundario);
 }
 
-.botones__mostrar:hover{
+.botones__boton:hover{
     color: var(--texto-primario);
     background-color: var(--terciario);
     transform: scale(1.05);

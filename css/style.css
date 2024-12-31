@@ -48,6 +48,63 @@ body{
     text-transform: capitalize;
 }
 
+.color-1 {
+    background-color: #2F0101;
+}
+
+.color-2 {
+    background-color: #000A32;
+}
+
+.color-3 {
+    background-color: #002701;
+}
+
+.estilo-1-titulo {
+    font-family: var(--fuente-estilo-1);
+    font-size: 1.75rem;
+}
+
+.estilo-1-subtitulo {
+    font-family: var(--fuente-estilo-1);
+    font-size: 1.2rem;
+}
+
+.estilo-1-cuerpo {
+    font-family: var(--fuente-estilo-1);
+    font-size: 0.85rem;
+}
+
+.estilo-2-titulo {
+    font-family: var(--fuente-estilo-2);
+    font-size: 1.8rem;
+}
+
+.estilo-2-subtitulo {
+    font-family: var(--fuente-estilo-2);
+    font-size: 1.3rem;
+}
+
+.estilo-2-cuerpo {
+    font-family: var(--fuente-estilo-2);
+    font-size: 0.87rem;
+}
+
+.estilo-3-titulo {
+    font-family: var(--fuente-estilo-3);
+    font-size: 1.9rem;
+}
+
+.estilo-3-subtitulo {
+    font-family: var(--fuente-estilo-3);
+    font-size: 1.3rem;
+}
+
+.estilo-3-cuerpo {
+    font-family: var(--fuente-estilo-3);
+    font-size: 0.85rem;
+}
+
 /* ***Estilos para el Header*** */
 
 .header{
@@ -365,18 +422,6 @@ body{
     transform: scale(1.05)
 }
 
-.opcion__color--1 {
-    background-color: #2F0101;
-}
-
-.opcion__color--2 {
-    background-color: #000A32;
-}
-
-.opcion__color--3 {
-    background-color: #002701;
-}
-
 .estilos__label {
     cursor: pointer;
     font-size: 1.35rem;
@@ -588,106 +633,204 @@ body{
     width: 15rem;
 }
 
-/*Estilos carta*/
-    .carta {
-        display: grid;
-        grid-template-rows: repeat(7, 1fr);
-        grid-template-areas: 
-            "imagenes arriba"
-            "titulo"
-            "destinataro"
-            "imagenes 2025"
-            "remitente"
-            "cuerpo carta"
-            "imagenes abajo";
-        max-width: 100%;
-        max-height: 100rem; /*Temporal en lo que se arregla el desmadre*/
-    }
-
-.carta__imagenes__arriba{
-    grid-area: imagenes arriba;
+/* ***Estilos carta*** */
+.carta {
+    margin: 1rem auto;
+    width: 75%;
+    max-width: 25rem;
+    aspect-ratio: 12 / 18;  /* Proporcion ancho:alto */
+    position: relative;
     display: grid;
-    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-rows: 30% 1fr 28%;
+    color: var(--texto-primario);
+    overflow: hidden;
 }
 
-.carta img {
-    max-width: 90%;
-    height: auto;
+.carta__arriba, .carta__principal, .carta__abajo {
+    position: relative;
+    display: flex;
 }
 
-.carta__esferas__1 {
-    grid-column: 1 / 2;
+.carta__arriba {
+    grid-row: 1/2;
 }
 
-.carta__esferas__2 {
-    grid-column: 2 / 3;
+.carta__principal {
+    grid-row: 2/3;
 }
 
-.carta__esferas__3 {
-    grid-column: 3 / 4;
+.carta__abajo {
+    grid-row: 3/4;
 }
 
+.carta__titulo, .carta__year, .carta__remitente, .carta__mensaje {
+    position: absolute;
+}
+
+.carta__year {
+    position: relative;
+    width: 100%;
+}
+
+/* **Imágenes y contenido de la carta** */
+.carta__imagen, .globos__globo {
+    min-width: 0;
+    height: 100%;
+    position: absolute;
+}
+
+/* Imágenes de arriba */
+.carta__imagen--arriba-2, .carta__imagen--arriba-3 {
+    height: 70%;
+}
+
+.carta__imagen--arriba-2 {
+    left: 19%;
+}
+
+.carta__imagen--arriba-3 {
+    left: 70%;
+}
+
+/* Contenido e imágenes principales */
 .carta__titulo {
-    grid-area: titulo;
-    align-items: center;
+    width: 100%;
+    left: 50%;
+    translate: -50% -55%;
+    text-align: center;
 }
 
-.carta__anonimo__1 {
-    grid-area: destinatario;
+.carta__remitente {
+    width: 100%;
+    top: 52%;
+    text-align: center;
 }
 
-.carta__imagenes__centrales {
-    grid-area: imagenes 2025;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+.carta__mensaje {
+    width: 80%;
+    text-align: center;
+    left: 50%;
+    top: 68%;
+    translate: -50% 0;
 }
 
-.carta__central__20{
-    grid-column: 1 / 2;
+.carta__imagen--principal-1, .carta__imagen--principal-2,
+.carta__imagen--principal-3, .carta__imagen--principal-4 {
+    top: 16%;
+    height: 33%;
 }
 
-.carta__central__copas{
-    grid-column: 2 / 3;
+.carta__imagen--principal-1 {
+    left: 13%;
 }
 
-.carta__central__25{
-    grid-column: 3 / 4;
+.carta__imagen--principal-2 {
+    left: 36%;
 }
 
-.carta__central__sombrero {
-    grid-column: 3 / 4;
-    width: 30%;
+.carta__imagen--principal-3 {
+    right: 13%;
 }
 
-.carta__anonimo__2 {
-    grid-area: remitente;
-    align-items: center;
+.carta__imagen--principal-4 {
+    height: 23%;
+    transform: scaleX(-1);
+    right: 8.5%;
+    translate: 0 -57%;
 }
 
-.carta__contenido__texto {
-    grid-area: cuerpo carta;
+/* Imágenes de abajo */
+.abajo__globos, .abajo__centro {
+    position: relative;
 }
 
-.carta__contenido__imagenes__abajo {
-    grid-area: imagenes abajo;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
+.abajo__globos {
+    width: 20%;
 }
 
-.imagenes__globos__izquierda{
-    grid-column: 1 / 2;
+.abajo__centro {
+    width: 60%;
 }
 
-.imagenes__fuegos__artificiales{
-    grid-column: 2 / 5;
+.globos__globo {
+    height: 80%;
+    top: -10%;
+    left: -35%;
 }
 
-.imagenes__globos__derecha{
-    grid-column: 5 / 6;
+.globos__globo--2 {
+    translate: -10% 10%;
+    transform: rotate(-20deg);
+}
+
+.globos__globo--3 {
+    translate: 10% 10%;
+    transform: rotate(15deg);
+}
+
+.carta__imagen--abajo-1, .carta__imagen--abajo-3 {
+    height: 50%;
+    bottom: 0;
+}
+
+.carta__imagen--abajo-2 {
+    height: 60%;
+    left: 50%;
+    translate: -50% 20%;
+}
+
+.carta__imagen--abajo-3 {
+    right: 0;
 }
 
 /* ***Media Query*** */
 @media(width > 36rem) {
+    /* ***Estilos Generales*** */
+    .estilo-1-titulo {
+        font-family: var(--fuente-estilo-1);
+        font-size: 1.8rem;
+    }
+
+    .estilo-1-subtitulo {
+        font-family: var(--fuente-estilo-1);
+        font-size: 1.4rem;
+    }
+
+    .estilo-1-cuerpo {
+        font-family: var(--fuente-estilo-1);
+        font-size: 0.97rem;
+    }
+
+    .estilo-2-titulo {
+        font-family: var(--fuente-estilo-2);
+        font-size: 2.1rem;
+    }
+
+    .estilo-2-subtitulo {
+        font-family: var(--fuente-estilo-2);
+        font-size: 1.75rem;
+    }
+
+    .estilo-2-cuerpo {
+        font-family: var(--fuente-estilo-2);
+        font-size: 1rem;
+    }
+
+    .estilo-3-titulo {
+        font-family: var(--fuente-estilo-3);
+        font-size: 2.1rem;
+    }
+
+    .estilo-3-subtitulo {
+        font-family: var(--fuente-estilo-3);
+        font-size: 1.6rem;
+    }
+
+    .estilo-3-cuerpo {
+        font-family: var(--fuente-estilo-3);
+        font-size: 1rem;
+    }
+
     /* ***Estilos para el header*** */
     .header{
         flex-direction: row;
